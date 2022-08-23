@@ -13,8 +13,8 @@ int partition(int *A,int low,int high)
         {
             i++;
         }
-        while(A[j] > pivot)
-        {
+        while(A[j] > pivot) // Here if we'll use >= (if it is in both loop ie. in above while & this one, than if will show TLE, there will be an infinte loop)
+        {                   // (if we'll use only in this loop than this will not execute accurately, it'll show error)
             j--;
         }
         if(i<j)
